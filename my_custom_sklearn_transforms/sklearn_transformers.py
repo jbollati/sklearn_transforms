@@ -2,7 +2,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 
 
 # All sklearn Transforms must have the `transform` and `fit` methods
-class TortugaTransfomer(BaseEstimator, TransformerMixin):
+class TortugaTransformer(BaseEstimator, TransformerMixin):
     def __init__(self, columns):
         self.columns = columns
 
