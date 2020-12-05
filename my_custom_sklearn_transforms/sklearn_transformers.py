@@ -12,6 +12,6 @@ class CSTransformer(BaseEstimator, TransformerMixin):
         # Primeiro realizamos a cópia do dataframe 'X' de entrada
         data = X.copy()
         data = data.drop(labels=self.columns, axis='columns')
-        data = data.fillna(data.mean())
+        data = data.replace(to_replace={'FALSE POSITIVE': 1, 'CANDIDATE': 2})
         # Devolvemos un nuevo dataframe de datos preprocesados
         return data
